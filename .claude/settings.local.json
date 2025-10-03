@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet --version)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(dotnet restore:*)",
+      "Bash(\"/c/Program Files/dotnet/dotnet.exe\" --version)",
+      "Bash(\"/c/Program Files/dotnet/dotnet.exe\" restore)",
+      "Bash(\"/c/Program Files/dotnet/dotnet.exe\" run)",
+      "Bash(python:*)",
+      "Bash(curl -s http://localhost:5000/swagger/index.html)",
+      "Bash(sqlite3:*)",
+      "Bash(\"/c/Program Files/dotnet/dotnet.exe\" build)",
+      "Bash(dotnet build)",
+      "Bash(\"/c/Program Files/dotnet/dotnet.exe\" build \"d:/Code/MZ/backend/MedicalSystem.csproj\")",
+      "Bash(git checkout:*)",
+      "Bash(taskkill:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
