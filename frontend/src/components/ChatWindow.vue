@@ -155,7 +155,7 @@ const sendMessage = async () => {
 // 处理工作流
 const handleWorkflow = async (userMessage) => {
   try {
-    const response = await fetch('http://localhost:5000/api/workflow/process', {
+    const response = await fetch('http://localhost:5001/api/workflow/process', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -225,7 +225,7 @@ const hasActions = (content) => {
 const handleSavePatient = async () => {
   try {
     loading.value = true
-    const response = await fetch('http://localhost:5000/api/chat/extract-patient', {
+    const response = await fetch('http://localhost:5001/api/chat/extract-patient', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ sessionId: props.sessionId })
@@ -301,7 +301,7 @@ const handleShowAppointments = async () => {
         })
 
         // 调用验证接口
-        const verifyResponse = await fetch('http://localhost:5000/api/appointments/verify-patient', {
+        const verifyResponse = await fetch('http://localhost:5001/api/appointments/verify-patient', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ phone })
@@ -351,7 +351,7 @@ const handleShowAppointments = async () => {
 
 // 显示预约信息对话框
 const showAppointmentsDialog = async () => {
-  const response = await fetch('http://localhost:5000/api/chat/available-appointments')
+  const response = await fetch('http://localhost:5001/api/chat/available-appointments')
   const data = await response.json()
   emit('appointmentsAvailable', data)
 }

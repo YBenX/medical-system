@@ -69,7 +69,7 @@ dotnet restore
 dotnet run
 ```
 
-后端将在 `http://localhost:5000` 启动。
+后端将在 `http://localhost:5001` 启动。
 
 ### 3. 启动前端
 
@@ -141,7 +141,7 @@ VALUES
 
 ## API接口文档
 
-后端运行后，访问 `http://localhost:5000/swagger` 查看完整的API文档。
+后端运行后，访问 `http://localhost:5001/swagger` 查看完整的API文档。
 
 ### 主要接口
 
@@ -191,7 +191,7 @@ VALUES
 
 ### 1. 后端无法启动
 - 确保已安装 .NET 9 SDK
-- 检查端口5000是否被占用
+- 检查端口5001是否被占用
 - 查看控制台错误信息
 
 ### 2. 前端无法连接后端

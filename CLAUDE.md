@@ -21,7 +21,7 @@ AI-powered medical clinic management system (门诊诊疗系统) with natural la
 # From /backend directory
 dotnet restore                    # Restore dependencies
 dotnet build                      # Build project
-dotnet run                        # Run (http://localhost:5000)
+dotnet run                        # Run (http://localhost:5001)
 "/c/Program Files/dotnet/dotnet.exe" run  # Windows Git Bash
 
 # Database
@@ -41,7 +41,7 @@ npm run build                     # Production build
 ### Running Full Stack
 
 Start both services concurrently:
-1. Backend: `cd backend && dotnet run` (port 5000)
+1. Backend: `cd backend && dotnet run` (port 5001)
 2. Frontend: `cd frontend && npm run dev` (port 5173)
 
 ## Architecture Overview
@@ -117,7 +117,7 @@ Display available slots → User selects → Create appointment
   - Displays workflow options (patient/time slot selection)
 
 **API Layer (`/frontend/src/api/`):**
-- `axios.js` - Configured for `http://localhost:5000/api` with CORS
+- `axios.js` - Configured for `http://localhost:5001/api` with CORS
 - `chat.js`, `patient.js`, `appointment.js`, `doctor.js` - API modules
 
 ### Key Controllers
@@ -239,7 +239,7 @@ Display available slots → User selects → Create appointment
    sqlite3 backend/medical.db < backend/init-data.sql
    ```
 
-3. **Ports:** Backend:5000, Frontend:5173 (CORS configured)
+3. **Ports:** Backend:5001, Frontend:5173 (CORS configured)
 
 ### Production Considerations
 
